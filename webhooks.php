@@ -39,8 +39,8 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
         replyMsg($arrayHeader,$arrayPostData);
     }
     // Message Type "Text + Sticker ใน 1 ครั้ง"
-    else if($message == "class cafe"){
-		$image_url = "black.jpg";
+    else if($message == "class"){
+		$image_url = "https://f.ptcdn.info/228/025/000/1415149921-1415149851-o.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "class cafe สวัสดีค่ะ";
