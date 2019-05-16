@@ -25,6 +25,24 @@ if (!is_null($events['events'])) {
 				'text' => $text
 			];
 
+			if($message == "สวัสดี"){
+				$arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+				$arrayPostData['messages'][0]['type'] = "text";
+				$arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
+				replyMsg($arrayHeader,$arrayPostData);
+			}
+			#ตัวอย่าง Message Type "Sticker"
+			else if($message == "ฝันดี"){
+				$arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+				$arrayPostData['messages'][0]['type'] = "sticker";
+				$arrayPostData['messages'][0]['packageId'] = "2";
+				$arrayPostData['messages'][0]['stickerId'] = "46";
+				replyMsg($arrayHeader,$arrayPostData);
+			}
+
+
+
+
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
