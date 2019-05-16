@@ -27,15 +27,7 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
         $arrayPostData['messages'][0]['stickerId'] = "46";
         replyMsg($arrayHeader,$arrayPostData);
     }
-    // Message Type "Image"
-    else if($message == "รูปน้องแมว"){
-        $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "image";
-        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
-        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
-        replyMsg($arrayHeader,$arrayPostData);
-    }
+
     //Message Type "Location"
     else if($message == "พิกัดคลาสวัดบูรพ์"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -47,13 +39,25 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
         replyMsg($arrayHeader,$arrayPostData);
     }
     // Message Type "Text + Sticker ใน 1 ครั้ง"
-    else if($message == "ลาก่อน"){
+    else if($message == "class cafe"){
+		$image_url = "black.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "อย่าทิ้งกันไป";
-        $arrayPostData['messages'][1]['type'] = "sticker";
-        $arrayPostData['messages'][1]['packageId'] = "1";
-        $arrayPostData['messages'][1]['stickerId'] = "131";
+        $arrayPostData['messages'][0]['text'] = "class cafe สวัสดีค่ะ";
+        $arrayPostData['messages'][1]['type'] = "image";
+        $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
+		replyMsg($arrayHeader,$arrayPostData);
+		
+	}
+	
+	   // Message Type "Image"
+	   else if($message == "รูปน้องแมว"){
+        $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "image";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
     }
 
