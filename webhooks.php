@@ -13,11 +13,15 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
     $message = $arrayJson['events'][0]['message']['text'];
 
 // Message Type "Text"
-    if($message == "สวัสดี"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+    if($message == "สวัสดี"."สวัสดีค่ะ"."สวัสดีครับ"){
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
-        replyMsg($arrayHeader,$arrayPostData);
+         $arrayPostData['messages'][0]['text'] = "คลาสคาเฟ่ สวัสดีค่ะ";
+         $image_url = "https://brandinside.asia/wp-content/uploads/2017/08/class-drive.jpg";
+         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+         $arrayPostData['messages'][1]['type'] = "image";
+         $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
+         $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
+          replyMsg($arrayHeader,$arrayPostData);
     }
     //Message Type "Sticker"
     else if($message == "ฝันดี"){
@@ -49,18 +53,7 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
 		replyMsg($arrayHeader,$arrayPostData);
 		
     }
-	
-	   // Message Type "Image"
-    else if($message == "คลาสคาเฟ่"){
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "คลาสคาเฟ่ สวัสดีค่ะ";
-        $image_url = "https://brandinside.asia/wp-content/uploads/2017/08/class-drive.jpg";
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][1]['type'] = "image";
-        $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
-        $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
-        replyMsg($arrayHeader,$arrayPostData);
-    }
+
 
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
