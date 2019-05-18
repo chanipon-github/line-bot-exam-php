@@ -23,6 +23,19 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
          $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
           replyMsg($arrayHeader,$arrayPostData);
     }
+
+
+
+    else if($message == "Hi"){
+        $video_url = "https://youtu.be/OxWw8aBcgtQ";
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "video";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $video_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] =  $video_url;
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+
+
     //Message Type "Sticker"
     else if($message == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -52,14 +65,6 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
         $arrayPostData['messages'][1]['stickerId'] = "131";
 		replyMsg($arrayHeader,$arrayPostData);
 		
-    }
-
-    else if($message == "video"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "video";
-        $arrayPostData['messages'][0]['originalContentUrl'] = "https://youtu.be/OxWw8aBcgtQ";
-        $arrayPostData['messages'][0]['previewImageUrl'] =  $image_url;
-        replyMsg($arrayHeader,$arrayPostData);
     }
 
 
