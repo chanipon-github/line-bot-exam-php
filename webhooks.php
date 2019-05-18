@@ -13,7 +13,7 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
     $message = $arrayJson['events'][0]['message']['text'];
 
 // Message Type "Text"
-    if($message == "สวัสดี","สวัสดีค่ะ"){
+    if($message == "สวัสดี"){
         $arrayPostData['messages'][0]['type'] = "text";
          $arrayPostData['messages'][0]['text'] = "คลาสคาเฟ่ สวัสดีค่ะ";
          $image_url = "https://brandinside.asia/wp-content/uploads/2017/08/class-drive.jpg";
