@@ -27,10 +27,9 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
 
 
     else if($message == "Hi"){
-        
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "video";
-        $arrayPostData['messages'][0]['originalContentUrl'] = "https://youtu.be/OxWw8aBcgtQ";
+        $arrayPostData['messages'][0]['originalContentUrl'] = "https://www.youtube.com/watch?v=OxWw8aBcgtQ";
         $arrayPostData['messages'][0]['previewImageUrl'] =  "https://www.mangozero.com/wp-content/uploads/2018/10/16-Oct-02.jpg";
         replyMsg($arrayHeader,$arrayPostData);
     }
