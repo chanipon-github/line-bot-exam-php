@@ -24,8 +24,7 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
           replyMsg($arrayHeader,$arrayPostData);
     }
 
-
-
+    //Message Type "Video"
     else if($message == "Hi"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "video";
@@ -36,11 +35,11 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
 
 
     //Message Type "Sticker"
-    else if($message == "ฝันดี"){
+    else if($message == "ขอบคุณค่ะ"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "sticker";
-        $arrayPostData['messages'][0]['packageId'] = "2";
-        $arrayPostData['messages'][0]['stickerId'] = "46";
+        $arrayPostData['messages'][0]['packageId'] = "11539";
+        $arrayPostData['messages'][0]['stickerId'] = "52114110";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
