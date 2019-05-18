@@ -52,13 +52,13 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
 	
 	   // Message Type "Image"
     else if($message == "คลาสคาเฟ่"){
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "คลาสคาเฟ่ สวัสดีค่ะ";
         $image_url = "https://f.ptcdn.info/228/025/000/1415149921-1415149851-o.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "image";
-        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
-        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
-        $arrayPostData['messages'][1]['type'] = "text";
-        $arrayPostData['messages'][1]['text'] = "คลาสคาเฟ่ สวัสดีค่ะ";
+        $arrayPostData['messages'][1]['type'] = "image";
+        $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
     }
 
