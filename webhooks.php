@@ -64,7 +64,7 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
         $arrayPostData['messages'][1]['stickerId'] = "131";
 		replyMsg($arrayHeader,$arrayPostData);
 		
-    }
+    } 
    
     else if($message == "นับ 1-10"){
         for($i=1;$i<=10;$i++){
