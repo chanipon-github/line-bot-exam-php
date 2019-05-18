@@ -48,6 +48,17 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
         $arrayPostData['messages'][1]['stickerId'] = "131";
 		replyMsg($arrayHeader,$arrayPostData);
 		
+    }
+    
+    else if($message == "ไง"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "วัดสัปปป";
+        $arrayPostData['messages'][1]['type'] = "sticker";
+        $arrayPostData['messages'][1]['packageId'] = "1";
+        $arrayPostData['messages'][1]['stickerId'] = "131";
+		replyMsg($arrayHeader,$arrayPostData);
+		
 	}
 	
 	   // Message Type "Image"
