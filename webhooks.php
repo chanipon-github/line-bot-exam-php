@@ -49,21 +49,10 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
 		replyMsg($arrayHeader,$arrayPostData);
 		
     }
-    
-    else if($message == "ไง"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "วัดสัปปป";
-        $arrayPostData['messages'][1]['type'] = "sticker";
-        $arrayPostData['messages'][1]['packageId'] = "1";
-        $arrayPostData['messages'][1]['stickerId'] = "131";
-		replyMsg($arrayHeader,$arrayPostData);
-		
-	}
 	
 	   // Message Type "Image"
-    else if($message == "รูปน้องแมว"){
-        $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
+    else if($message == "คลาสคาเฟ่"){
+        $image_url = "https://f.ptcdn.info/228/025/000/1415149921-1415149851-o.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
