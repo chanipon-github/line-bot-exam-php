@@ -33,7 +33,6 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
         replyMsg($arrayHeader,$arrayPostData);
     }
 
-
     //Message Type "Sticker"
     else if($message == "ขอบคุณค่ะ"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -53,6 +52,7 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
         $arrayPostData['messages'][0]['longitude'] = "102.110534";
         replyMsg($arrayHeader,$arrayPostData);
     }
+
     // Message Type "Text + Sticker ใน 1 ครั้ง"
     else if($message == "ลาก่อน"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -65,9 +65,14 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
 		
     } 
    
+    else if($message == "Please select"){
+        $arrayPostData['replyToken'] = $arrayJson['events'[0]['replyToken'];
+        $arrayPostData['message'][0]['buttons'] = "buttons"; 
+        $arrayPostData['messages'][0]['title'] = "Menu";
+        $arrayPostData['messages'][0]['thumbnailImageUrl'] = "https://example.com/bot/images/image.jpg";
 
+    }
 
-    
  
 
 function replyMsg($arrayHeader,$arrayPostData){
