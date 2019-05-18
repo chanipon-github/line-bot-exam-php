@@ -65,7 +65,16 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
 		replyMsg($arrayHeader,$arrayPostData);
 		
     }
+   
+    if($message == "นับ 1-10"){
+        for($i=1;$i<=10;$i++){
+           $arrayPostData['to'] = $id;
+           $arrayPostData['messages'][0]['type'] = "text";
+           $arrayPostData['messages'][0]['text'] = $i;
+           pushMsg($arrayHeader,$arrayPostData);
+        }
 
+ 
 
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
