@@ -66,8 +66,9 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
 		
     } 
    
-    else if($message == "นับ 1-10"){
+    else if($message == "1-10"){
         for($i=1;$i<=10;$i++){
+            $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
            $arrayPostData['to'] = $id;
            $arrayPostData['messages'][0]['type'] = "text";
            $arrayPostData['messages'][0]['text'] = $i;
