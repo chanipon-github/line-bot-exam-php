@@ -54,7 +54,7 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
     else if($message == "คลาสคาเฟ่"){
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "คลาสคาเฟ่ สวัสดีค่ะ";
-        $image_url = "https://f.ptcdn.info/228/025/000/1415149921-1415149851-o.jpg";
+        $image_url = "https://brandinside.asia/wp-content/uploads/2017/08/class-drive.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][1]['type'] = "image";
         $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
