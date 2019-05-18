@@ -58,7 +58,7 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "video";
         $arrayPostData['messages'][0]['originalContentUrl'] = "https://youtu.be/OxWw8aBcgtQ";
-        $arrayPostData['messages'][0]['previewImageUrl'] = "";
+        $arrayPostData['messages'][0]['previewImageUrl'] =  $image_url;
         replyMsg($arrayHeader,$arrayPostData);
     }
 
