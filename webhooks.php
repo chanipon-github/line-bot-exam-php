@@ -57,8 +57,8 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
     else if($message == "video"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "video";
-        $arrayPostData['messages'][0]['originalContentUrl'] = "https://www.facebook.com/classcoffee/videos/792715694262287/";
-        $arrayPostData['messages'][0]['previewImageUrl'] = "https://scontent.fbkk11-1.fna.fbcdn.net/v/t1.0-9/60693475_1100184326848754_2712644294103007232_n.jpg?_nc_cat=104&_nc_ht=scontent.fbkk11-1.fna&oh=02a84a708ca9df116a29143f2b15b9c6&oe=5D9E2960";
+        $arrayPostData['messages'][0]['originalContentUrl'] = "https://www.youtube.com/watch?v=OxWw8aBcgtQ";
+        $arrayPostData['messages'][0]['previewImageUrl'] = "";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
