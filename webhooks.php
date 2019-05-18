@@ -64,14 +64,7 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
 		replyMsg($arrayHeader,$arrayPostData);
 		
     } 
-   
-    else if($message == "Please select"){
-        $arrayPostData['replyToken'] = $arrayJson['events'[0]['replyToken'];
-        $arrayPostData['message'][0]['buttons'] = "buttons"; 
-        $arrayPostData['messages'][0]['title'] = "Menu";
-        $arrayPostData['messages'][0]['thumbnailImageUrl'] = "https://example.com/bot/images/image.jpg";
-
-    }
+  
 
  
 
