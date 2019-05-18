@@ -57,6 +57,8 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
         $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "คลาสคาเฟ่ สวัสดีค่ะ";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
