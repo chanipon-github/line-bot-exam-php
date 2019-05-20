@@ -8,21 +8,8 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
     $arrayHeader = array();
     $arrayHeader[] = "Content-Type: application/json";
     $arrayHeader[] = "Authorization: Bearer {$access_token}";
- 
-$httpClient = new CurlHTTPClient(LINE_MESSAGE_ACCESS_TOKEN);
-$bot = new LINEBot($httpClient, array('channelSecret' => LINE_MESSAGE_CHANNEL_SECRET));
- 
 
-if(!is_null($events)){
-    // ถ้ามีค่า สร้างตัวแปรเก็บ replyToken ไว้ใช้งาน
-    $replyToken = $events['events'][0]['replyToken'];
-    $userID = $events['events'][0]['source']['userId'];
-    $sourceType = $events['events'][0]['source']['type'];        
-    $is_postback = NULL;
-    $is_message = NULL;
-    
-   
-    
+
     if(!is_null($is_message)){
         switch ($typeMessage){
             case 'text':
