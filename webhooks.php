@@ -9,6 +9,27 @@ $access_token = '6TvBLa/XIptJXxGnGyjbueq2qsxnT+asIMk+Qx25KhJJ23H6ARgKZE5AxxT+HGW
     $arrayHeader[] = "Content-Type: application/json";
     $arrayHeader[] = "Authorization: Bearer {$access_token}";
 
+
+
+
+    $imageMapUrl = 'https://www.mywebsite.com/imgsrc/photos/w/sampleimagemap';
+    $replyData = new ImagemapMessageBuilder(
+        $imageMapUrl, // ส่วนของการกำหนด url รูป
+        'This is Imagemap', // ส่วนของการกำหนดหัวเรื่องว่าเกี่ยวกับอะไร
+        new BaseSizeBuilder(699,1040), // กำหนดขนาดของรูป (สูง,กว้าง)
+        array(
+            new ImagemapMessageActionBuilder(
+                'test image map',
+                new AreaBuilder(0,0,520,699)
+                ),
+            new ImagemapUriActionBuilder(
+                'http://www.ninenik.com',
+                new AreaBuilder(520,0,520,699)
+                )
+        ));
+
+
+
     //รับข้อความจากผู้ใช้
     $message = $arrayJson['events'][0]['message']['text'];
 
@@ -80,4 +101,9 @@ function replyMsg($arrayHeader,$arrayPostData){
     }
 
    exit;
+
+
+
+
+
 ?>
